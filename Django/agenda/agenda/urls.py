@@ -1,4 +1,4 @@
-"""meu_projeto URL Configuration
+"""agenda URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -19,9 +19,6 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello),
-    path('soma/<int:num1>/<int:num2>/', views.soma),
-    path('subtracao/<int:num1>/<int:num2>/', views.subtracao),
-    path('multiplicacao/<int:num1>/<int:num2>/', views.multiplicacao),
-    path('division/<int:num1>/<int:num2>/', views.division)
+    path('eventos/<titulo_evento>/', views.titulo),
+    path("", views.home),
 ]
